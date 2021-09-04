@@ -463,7 +463,7 @@ def _main():
                                 "kafka config section")
                 exit(-1)
             if "ssl" in kafka_config:
-                opts.kafka_ssl = kafka_config["ssl"].getboolean()
+                opts.kafka_ssl = kafka_config.getboolean("ssl")
             if "skip_certificate_verification" in kafka_config:
                 kafka_verify = kafka_config.getboolean(
                     "skip_certificate_verification")
